@@ -1,0 +1,46 @@
+- page_title = 'ITHub-HTML-2-KT1'
+- @stylesheets = ['css/styles.css',
+'https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i',
+'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i'];
+
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title= page_title
+    %meta{:charset => "utf-8"}
+    - @stylesheets.each do |link|
+      %link{:rel => "stylesheet", :href => link}
+
+  %body.page-body
+    %header.page-header
+      .a-left.dynamic-width
+        %h3
+          %a{:href => "/"}Creative Studio
+    %section.page-section
+      .section.dynamic-width.dynamic-height
+        %h1 We are Creative Agency
+        .spacer.dynamic-width
+          .items.repeater.a-center
+            .item
+              %span Icon
+              %h2 Basics
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+              %a{:href => "/"}more
+            .item
+              %span Icon
+              %h2 Design
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+              %a{:href => "/"}more
+            .item
+              %span Icon
+              %h2 Awards
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+              %a{:href => "/"}more
+      .spacer
+
+    %footer.page-footer
+      .footer.a-center
+        %h3
+          %a{:href => "/"}Creative Studio
+
+
